@@ -1,0 +1,205 @@
+const slices = document.querySelector('#slices');
+const selectKiller = document.querySelector('select#killer');
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+
+    selectKiller.value = params.get('killer') ? params.get('killer') : 'o cacador';
+    switchVal(params.get('killer') ? params.get('killer') : 'o cacador'); 
+    // selectKiller.dispatchEvent(new Event('change'));
+    // watchSidebar();
+    await fx();
+
+    hasOverflowSidebar();
+
+});
+
+selectKiller.onchange = async function() {
+    const value = this.value;
+    const params = new URLSearchParams(window.location.search);
+
+    params.set('killer', value);
+    window.history.replaceState({}, "", `${window.location.pathname}?${params}`);
+
+    window.location.href = `?killer=${value}`;
+    // switchVal(value);
+
+    // watchSidebar();
+    await fx(false);
+
+}
+
+function toggleExpandBtn() {
+    const sidebarContent = document.querySelector('#sidebar-content');
+    const expandMoreBtn = document.querySelector('#expand-more');
+    const hasntContent = sidebarContent.innerHTML.trim().length == 0;
+    expandMoreBtn.style.display = hasntContent ? 'none' : 'block';
+    sidebarContent.style.display =  hasntContent ? 'none' : 'block';
+
+}
+
+function watchSidebar() {
+    // diminuir sidebar
+    const sidebarContent = document.querySelector('#sidebar-content');
+    const main = document.querySelector('.main')
+    if(sidebarContent.innerHTML.trim().length == 0) {
+        console.log(main)
+        sidebarContent.style.display = 'none';
+        main.style.alignItems = 'flex-start';
+    } else {
+        sidebarContent.style.display = 'flex';
+        main.style.alignItems = 'normal';
+
+    }
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function fx(notFirst = true) {
+    const imgs = document.querySelectorAll(`
+        #slices img.icons,
+        .section-skill .thumbnail,
+        #killerImg,
+        #poder
+    `);
+
+    const descs = document.querySelectorAll(`
+        #container .slice1 .compDesc,
+        #container .middle .text
+    `);
+
+    const imgsArr = [...imgs];
+    const descsArr = [...descs];
+
+    console.log({ imgsArr, descsArr });
+
+    const bg = document.querySelector('#container .bg');
+    if (bg) bg.style.opacity = '0';
+
+    // --- ESTADO INICIAL ---
+    imgsArr.forEach(img => {
+        img.style.opacity = '0';
+    });
+
+    descsArr.forEach(text => {
+        text.style.opacity = '0';
+        text.style.fontSize = '0px';
+    });
+
+    // espera um frame para o navegador aplicar o "estado inicial"
+    await new Promise(requestAnimationFrame);
+
+    // --- ESTADO FINAL ---
+    if (bg) bg.style.opacity = '.8';
+
+    imgsArr.forEach(img => {
+        img.style.opacity = '1';
+    });
+
+    descsArr.forEach(text => {
+        text.style.opacity = '1';
+        text.style.fontSize = '12px';
+    });
+}
+
+
+
+// set complementos
+
+function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, skills, bg, sidebarHtml }) {
+    // set img
+    const comp1 = document.querySelector(`.comp[data-num="1"]`);
+    const comp2 = document.querySelector(`.comp[data-num="2"]`);
+
+    comp1.src = `assets/perks/${img1}`;
+    comp2.src = `assets/perks/${img2}`;
+
+    // set description
+    const comp1Desc = document.querySelector(`.compDesc[data-num="1"]`);
+    const comp2Desc = document.querySelector(`.compDesc[data-num="2"]`);
+
+    comp1Desc.innerHTML = desc1;
+    comp2Desc.innerHTML = desc2;
+
+    // oferenda
+    // const oferenda = document.querySelector('img#oferenda');
+    // oferenda.src = `assets/killers/${oferendaImg}`;
+
+    const sidebarContent = document.querySelector('#sidebar-content');
+    if(!sidebarHtml) {
+        sidebarContent.innerHTML = '';
+
+    } else {
+        sidebarContent.innerHTML = sidebarHtml;
+    }
+    
+
+    const killer = document.querySelector(`#killerImg`);
+    killer.src = `assets/killers/${killerImg}`;
+
+    // poder
+    const power = document.querySelector('img#poder');
+    power.src = `assets/killers/${powerImg}`;
+
+    //bg
+    const backgROUD = document.querySelector('#container .bg');
+    backgROUD.style.backgroundImage = `url("assets/${bg}")`;
+
+    // skills
+
+    const skillEls = document.querySelectorAll('.section-skill .divider');
+
+    
+    if(skills && skills.length != 0) {
+        skills.forEach((skill, index) => {
+            const skillEl = skillEls[index];
+            skillEl.innerHTML = '';
+            
+            const thumbnail = document.createElement('img');
+            thumbnail.classList.add('thumbnail');
+            thumbnail.src = `assets/perks/${skill.img}`;
+
+            const descEl = document.createElement('div');
+            descEl.classList.add('text');
+            descEl.innerHTML = skill.description;
+
+            skillEl.appendChild(thumbnail);
+            skillEl.appendChild(descEl);
+        })
+    }
+
+}
+
+function hasOverflowSidebar() {
+    const sidebarContent = document.querySelector('.main #sidebar #sidebar-content');
+    const expandMoreBtn = document.querySelector('#expand-more');
+    const expandMoreBtnText = document.querySelector('#expand-more span');
+    const hasOverflow = sidebar.scrollHeight > sidebar.clientHeight || sidebar.scrollWidth > sidebar.clientWidth;
+
+    expandMoreBtnText.innerText =  'Expandir';
+    
+    expandMoreBtn.addEventListener("click", function () {
+            sidebarContent.classList.toggle('expanded');
+
+        if (sidebarContent.style.maxHeight) {
+            sidebarContent.style.maxHeight = null; // recolhe
+            expandMoreBtnText.innerText = "Expandir";
+        } else {
+            sidebarContent.style.maxHeight = sidebarContent.scrollHeight + "px"; // expande
+            expandMoreBtnText.innerText = "Recolher";
+        }
+    });
+
+}
+
+function reset(bg) {
+    slices.style.display = 'none';
+    const sidebarContent = document.querySelector('#sidebar-content');
+    sidebarContent.innerHTML = '';
+
+    setComp({
+        bg,
+    })
+}

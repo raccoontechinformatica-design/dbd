@@ -29,6 +29,10 @@ function switchVal(value) {
             return freddy();
         case 'pig':
             return pig();
+        case 'clown':
+            return clown();
+        case 'legion':
+            return legion();
     }
 }
 
@@ -207,6 +211,9 @@ function caipira() {
         powerImg: 'caipira_k.png',
         img1: 'FulliconAddon_loProChains.png',
         img2: 'FulliconAddon_theThompsonsMix.png',
+        sidebarHtml: `
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-25i5xR0w04?si=WJghBUum505wx8Qo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `,
         desc1: `
 Concede a habilidade de continuar uma Corrida de Motosserra através de Paredes Quebráveis e paletes caídas, quebrando-os no processo.<br>
 Sobreviventes saudáveis ​​atingidos pela motosserra dentro de 5 segundos após ativar o efeito primário sofrem apenas um dano por um único estado de saúde.<br>
@@ -345,9 +352,7 @@ function bruxa() {
             {
                 img: 'g88hwlqfs9cb1.png',
                 description: `
-                    Cada vez que você persegue sua obsessão<br>
-                    <br>
-                    e deixá-los escapar, Brinque com sua comida ganha +1 ficha , até um máximo de 3 fichas .<br>
+                    Cada vez que você persegue sua obsessão e deixá-los escapar, Brinque com sua comida ganha +1 ficha , até um máximo de 3 fichas .<br>
                     Concede uma aceleração acumulável de 3 / 4 / 5 % 
                     <br>
                     Efeito de status por token, até um máximo de 9 / 12 / 15 % .<br>
@@ -575,6 +580,9 @@ function pig() {
             Uma mola no mecanismo força as engrenagens a girarem mais rápido.<br>
             Reduz o tempo de morte das Armadilhas de Urso Reversas em -20 segundos .
         `,
+        sidebarHtml: `
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zOrDpOi2oVM?si=oC3Llav53SD3Yxuq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `,
         skills: [
             {
                 img: 'Screenshot_2025-09-20_041328-removebg-preview.png',
@@ -614,4 +622,112 @@ function pig() {
             }
         ]
     });
+}
+
+function clown() {
+    setComp({
+        killerImg: 'DBD_Killer_Clown_only_266fa0018c.png',
+        bg: 'bg_clown.png',
+        powerImg: '0087saf.png',
+        img1: '0asf (1).png',
+        desc1: `
+            Enche o Palhaço de desejo e concentra suas habilidades de criação química.<br>
+            As Auras de todos os outros jogadores dentro de 6 metros de sua localização são revelados aos jogadores revigorados por 6 segundos .<br>
+        `,
+        img2: '0sa8f (1).png',
+        desc2: `
+          Um composto orgânico altamente volátil, tóxico nessa concentração.<br>
+            Consideravelmente aumenta a duração do efeito Intoxicado.
+        `,
+        sidebarHtml: `
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/f0l2PCjCm90?si=qv30EGpcwftnXOol" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `,
+        skills: [
+            {
+                img: 'rapid-brutality.png',
+                description: `
+                    Você não pode mais ganhar a Sede de Sangue<br>
+                    Efeito de status .<br>
+                    Atingir com sucesso um Sobrevivente com um Ataque Básico concede a você +5% de Aceleração<br>
+                    Efeito de status por 8 / 9 / 10 segundos .
+
+                `
+            },
+            {
+                img: 'Perks_ST_Surge_3689a7dfd3 (1).png',
+                description: `
+                    Colocar um Sobrevivente em estado de morte com um ataque básico faz com que todos os geradores em um raio de 32 metros explodam instantaneamente e comecem a regredir. Sobreviventes que consertarem o gerador gritarão. Geradores afetados por Surto perdem imediatamente 6 / 7 / 8 % do seu progresso.
+
+                `
+            },
+            {
+                img: 'forced-hesitation.png',
+                description: `
+                    Quando um Sobrevivente é colocado em estado de morte por qualquer meio, todos os outros Sobreviventes em um raio de 16 metros ao redor dele sofrem o efeito de status Impedido por 10 segundos , reduzindo sua velocidade de movimento em 20 % .<br>
+                    Esta vantagem entra em espera por 40/35/30 segundos .
+                `
+            },
+            {
+                img: 'save-the-best-for-last.png',
+                description: `
+                    Sempre que você atingir um Sobrevivente diferente da sua Obsessão
+                    com um Ataque Básico , Guarde o Melhor para o Final ganha +1 Ficha , até um máximo de 6 / 7 / 8 Fichas :<br>
+                    Concede uma redução de -4% no tempo de recarga em Ataques Básicos bem-sucedidos por Ficha, até um máximo de 24 / 28 / 32 % .<br>
+                    Sempre que você atingir sua Obsessão com um Ataque Básico ou Especial , Guarde o Melhor para o Final perde -2 Fichas .
+                `
+            }
+        ]
+    });
+}
+
+function legion() {
+    setComp({
+        bg: 'bg_legion.png',
+        img1: 'lateasdsadasdsast.png',
+        desc1: 'Consideravelmente diminui a diminuição da barra de poder em ataques bem-sucedidos.',
+        img2: 'asdasdassdaa.png',
+        desc2: `
+            Quando Efeito de Status Ferida Profunda foi aplicado durante a Fúria Bestial:<br><br>
+
+            Seu Raio de Terror afeta o Mapa inteiro.<br>
+            Qualquer Barricada que você saltar é imediatamente quebrada.
+        `,
+        killerImg: 'DBD_Killer_Legion_only_0868f7f5e9.png',
+        powerImg: '00f7asf.png',
+        skills: [
+            {
+                img: 'ybevd15gcl2f1%20(1).png',
+                description: `
+                    Você é resiliente à dor.
+                    <br>Reduz a duração dos Pallet Stuns em 40 / 45 / 50 % .
+                `
+            },
+            {
+                img: 'bambooozle.png',
+                description: `
+                    Depois de saltar uma janela Bamboozle invoca a Entidade para bloquear essa janela pelos próximos 8/12/16 segundos. <br>
+                    Janelas bloqueadas não podem ser recuperadas por sobreviventes.<br>
+                    Aumenta sua velocidade geral de salto em 5 / 10 / 15 % .
+                `
+            },
+            {
+                img: 'asdasdasa.png',
+                description: `
+                    Após quebrar manualmente um palete caído<br>
+                    por qualquer meio, por um total de 4 / 3 / 2 vezes , Spirit Fury ativa:<br>
+                    Causas da Entidade<br>
+                    para quebrar instantaneamente o próximo Pallet usado para atordoar você.<br>
+                    A penalidade normal de Atordoamento é aplicada depois, a menos que seja mitigada por outros efeitos.
+
+                `
+            },
+            {
+                img: 'fhdssds%20(1).png',
+                description: `
+                    Após fisgar um Sobrevivente, Pop Goes the Weasel é ativado por 35/40/45 segundos . Execute a ação Gerador de Dano enquanto Pop Goes the Weasel estiver ativo para se beneficiar do seguinte efeito :<br>
+                    Faz regredir instantaneamente o gerador danificado em -20% de sua Progressão atual.
+                `
+            }
+        ]
+    })
 }

@@ -21,14 +21,8 @@
         <div id="sidebar">
             <div class="title" style="font-size: 18px; color: #fff; font-style: italic;">Selecione um killer</div>
             <div class="dropdown">
-                <select name="killer" id="killer">
-                    <option value="o cacador" selected>O caçador</option>
-                    <option value="o espectro">O espectro</option>
-                    <option value="o caipira">O caipira</option>
-                    <option value="nurse">A enfermeira</option>
-                    <option value="a cacadora">A caçadora</option>
-                    <option value="pyramid head">O carrasco</option>
-                </select>
+                <div id="itemlist"></div>
+
             </div>
             <div id="sidebar-content">
                 
@@ -89,5 +83,7 @@
     </div>
 
     <script src="script.js?cb=<?php echo time(); ?>"></script>
+    <script src="killers.js?cb=<?php echo time(); ?>"></script>
+    <script src="dropdown.js?cb=<?php echo time(); ?>"></script>
 </body>
 </html>

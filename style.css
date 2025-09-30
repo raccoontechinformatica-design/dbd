@@ -389,6 +389,79 @@ div#sidebar-content {
     font-size: 0px;
 }
 
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 6px;
+  text-decoration: none;
+  color: #000;
+  padding: 8px;
+}
+
+.dropdown-item:hover {
+  background: #393939;
+  color: #fff;
+}
+
+.dropdown-item.selected::after {
+  content: "✔";
+  color: green;
+  font-weight: bold;
+}
+
+div#itemlist {
+    cursor: pointer;
+    user-select: none;
+}
+
+#itemlist summary {
+    background: #fff;
+    color: #000;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+#itemlist div#main-dropdown {
+    background: #fff;
+    color: #000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#itemlist input#search {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+#itemlist input#search:focus {
+    outline: none;
+}
+
+
+#itemlist summary {
+  list-style: none; /* remove a setinha padrão */
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+#itemlist summary span {
+    flex-grow: 1;
+}
+
+#itemlist summary::after {
+  content: "▶"; /* seta customizada */
+  /* transition: transform 0.2s; */
+  transform: rotate(90deg); /* gira quando abre */
+}
+
+#itemlist details[open] summary::after {
+}
+
 @media screen and (max-width: 1000px) {
     .main {
         flex-direction: column;
@@ -559,3 +632,4 @@ div#sidebar-content {
         display: block;
     }
 }
+

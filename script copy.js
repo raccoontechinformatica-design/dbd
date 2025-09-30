@@ -8,29 +8,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     
     // selectKiller.value = params.get('killer') ? params.get('killer') : 'o cacador';
-  
+    document.addEventListener("selectKiller", (e) => {
+    console.log("Evento disparado:", e.detail);
+    });
     switchVal(params.get('killer') ? params.get('killer') : 'o cacador'); 
     // selectKiller.dispatchEvent(new Event('change'));
     // watchSidebar();
     await fx();
 
     hasOverflowSidebar();
+
 });
 
-document.addEventListener("selectKiller", async (e) => {
+selectKiller.onchange = async function() {
+    const value = this.value;
     const params = new URLSearchParams(window.location.search);
 
-    params.set('killer', e.detail.value);
+    params.set('killer', value);
     window.history.replaceState({}, "", `${window.location.pathname}?${params}`);
 
-    window.location.href = `?killer=${e.detail.value}`;
+    window.location.href = `?killer=${value}`;
     // switchVal(value);
 
     // watchSidebar();
     await fx(false);
 
-});
-    
+}
+
 function toggleExpandBtn() {
     const sidebarContent = document.querySelector('#sidebar-content');
     const expandMoreBtn = document.querySelector('#expand-more');

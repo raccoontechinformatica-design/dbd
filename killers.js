@@ -3,21 +3,21 @@ function switchVal(value) {
     slices.style.display = 'block';
     
     switch(value) {
-        case 'a cacadora':
+        case 'huntress':
             return cacadora();
-        case 'o cacador':
+        case 'trapper':
             return cacador();
-        case 'o espectro':
+        case 'wraight':
             return espectro();
         case 'pyramid head':
             return pyramidHead();
-        case 'o caipira':
+        case 'billy':
             return caipira();
         case 'nurse':
             return nurse();
         case 'meyers':
             return meyers();
-        case 'bruxa':
+        case 'hag':
             return bruxa();
         case 'doctor':
             return doctor();
@@ -33,6 +33,12 @@ function switchVal(value) {
             return clown();
         case 'legion':
             return legion();
+        case 'plague':
+            return plague();
+        case 'ghost face':
+            return ghost();
+        case 'demogorgon':
+            return demogorgon();
     }
 }
 
@@ -526,6 +532,9 @@ function freddy() {
         `,
         killerImg: 'DBD_Killer_Nighmare_only_23c0774f8a.png',
         powerImg: '00asf (1).png',
+        sidebarHtml: `
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/R9OBDrVbG20?si=NerfNJnKxQWeuD8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `,
         skills: [
             {
                 img: 'fdsfdwerts (1).png',
@@ -726,6 +735,146 @@ function legion() {
                 description: `
                     Após fisgar um Sobrevivente, Pop Goes the Weasel é ativado por 35/40/45 segundos . Execute a ação Gerador de Dano enquanto Pop Goes the Weasel estiver ativo para se beneficiar do seguinte efeito :<br>
                     Faz regredir instantaneamente o gerador danificado em -20% de sua Progressão atual.
+                `
+            }
+        ]
+    })
+}
+
+function plague() {
+    setComp({
+        killerImg: 'K15_ThePlague_Portrait.webp',
+        bg: 'bg_plague.jpg',
+        img1: '08a7f.png',
+        desc1: `
+            O líquido amarelo e espesso é consumido para induzir o vômito.<br>
+            Usado para expurgar o mal do corpo.<br>
+            Aumenta o ganho de infecção de Vile Purge em +40% .
+        `,
+        img2: '0saf.png',
+        desc2: `
+            A  inalação de seus vapores fétidos aguça a visão da mente.<br>
+            As Auras de vômito Sobreviventes infectados são revelados a você por 3 segundos .
+        `,
+        powerImg: 'plague_vile_purge_4a504df465.png',
+        skills: [
+            {
+                img: 'whats-a-perk-that-you-know-its-not-op-at-all-but-you-get-v0-og0ybtsr2wdf1.png',
+                description: `
+                    Os sobreviventes sofrem dos Efeitos de Status Amaldiçoado  e Desatento  até o Feitiço: Brinquedinho ser purificado.<br>
+                    Pela primeira vez, 90 seconds, apenas o sobrevivente Amaldiçoado pode purificar o totem enfeitiçado.<br>
+                    A Aura  do totem enfeitiçado do Feitiço: Brinquedinho é revelada ao sobrevivente Amaldiçoado dentro de .
+
+                `
+            },
+            {
+                img: 'arruinar.png',
+                description: `
+                Um feitiço que afeta o progresso do reparo do gerador de todos os sobreviventes.
+                <br>Sempre que um gerador não estiver sendo reparado por um Sobrevivente, ele regredirá imediata e automaticamente seu progresso de Reparo em 50 / 75 / 100 % da velocidade normal de Regressão.
+                `
+            }, 
+            {
+                img: '108f71d5-1a89-42d7-bb20-f8e6c887b92a_removalai_preview_05.png',
+                description: `
+                    Em cada partida, 4 Ganchos aleatórios viram Ganchos do Tormento. Quando um Sobrevivente é enganchado em um Gancho do Tormento, o gerador com mais progresso explode e perde progresso. Os Sobreviventes que estiverem reparando esse gerador vão gritar e revelar a própria localização.
+                `
+            },
+            {
+                img: 'so-how-old-where-you-when-you-realized-hex-pentimento-a-v0-5x439tjxgxhd1.png',
+                description: `
+                    Para cada Totem Reacendido, Hex: Pentimento ganha +1 Ficha, até um máximo de 5 Fichas:<br>
+                    1 Ficha: Reduz a velocidade de ação para Cura e Reparo em -20%.<br>
+                    2 a 5 Fichas: Aumenta a força da penalidade de Velocidade de Ação em 1 / 2 / 3 % por Ficha, até um máximo de 24 / 28 / 32%.<br>
+                    Sobreviventes amaldiçoados por Hex: Pentimento veem as Auras dos Totens Reacendidos a 16 metros.<br>
+                    Quando Hex: Pentimento atingir seu limite de 5 Tokens, ele invoca A Entidade para o seguinte efeito:<br>
+                    Bloqueia todos os Totens Reacendidos pelo restante do Teste.<br>
+                `
+            }
+        ]
+    });
+}
+
+function ghost() {
+    setComp({
+        killerImg: 'K16_TheGhostFace_Portrait.webp',
+        powerImg: 'Dessa_BB.png',
+        img1: 'IMG_040.png',
+        bg: 'ghost_bg.jpg',
+        desc1: `
+            Concede +10% de Aceleração<br>
+            Efeito de status por 5 segundos após marcar um Sobrevivente.
+        `,
+        img2: 'Dessa_ANJINHO.png',
+        desc2: `
+            O filme dentro dela capturou sua última noite na cidade.<br>
+            Reduz o tempo de marcação de sobreviventes em -20% .
+        `,
+        skills: [
+            {
+                img: '108f71d5-1a89-42d7-bb20-f8e6c887b92a_removalai_preview_05%20(1).png',
+                description: `
+                    Em cada partida, 4 Ganchos aleatórios viram Ganchos do Tormento. Quando um Sobrevivente é enganchado em um Gancho do Tormento, o gerador com mais progresso explode e perde progresso. Os Sobreviventes que estiverem reparando esse gerador vão gritar e revelar a própria localização.
+                `
+            },
+            {
+                img: 'porcashufasdfg.png',
+                description: `
+                    Ferimentos infligidos por Ataques Básicos fazem com que os Sobreviventes sofram de Hemorragia e mutilado<br>
+                    Efeitos de status por 70/80/90 segundos .​​<br>
+                    Aumenta a frequência de sangramento de sobreviventes feridos em 50 / 75 / 100 % pela mesma duração.<br>
+                    Aumenta a taxa de regressão na qual a progressão parcial da cura é perdida devido à hemorragia em +25% .
+                `
+            },
+            {
+                img: 'sdsadsad.png',
+                description: `
+                    No início do teste, 4 ganchos aleatórios são transformados em ganchos do Flagelo :<br>
+                    As Auras de Scourge Hooks são revelados a você em branco .<br>
+                    Cada vez que um Sobrevivente é desenganchado de um Gancho do Flagelo , os seguintes efeitos se aplicam:<br>
+                    As auras de todos os outros sobreviventes são reveladas por 5/6/7 segundos .
+                `
+            },
+            {
+                img: 'bambooozle.png',
+                description: `
+                    Depois de saltar uma janela Bamboozle invoca a Entidade para bloquear essa janela pelos próximos 8/12/16 segundos. <br>
+                    Janelas bloqueadas não podem ser recuperadas por sobreviventes.<br>
+                    Aumenta sua velocidade geral de salto em 5 / 10 / 15 % .
+                `
+            }
+        ]
+    });
+}
+
+function demogorgon() {
+    setComp({
+        bg: 'bg_demogorgon.jpg',
+        powerImg: '008as7f.png',
+        img1: '008as7f.png',
+        desc1: `
+        Reduz o tempo de recarga de Ataques de Fragmentação bem-sucedidos usados ​​para quebrar Paredes Quebráveisou paletes em -10% .
+        `,
+        img2: '0087asf.png',
+        desc2: `
+            Reduz o tempo de recarga de Ataques de Fragmentação bem-sucedidos usados ​​para atingir Sobreviventes em -10% .
+        `,
+        killerImg: 'K17_TheDemogorgon_Portrait.webp',
+        skills: [
+            {
+                img: 'barbecue-chili.webp',
+                description: `
+                    Uma profunda conexão com a Entidade  desbloqueia o potencial na capacidade de leitura da Aura.<br>
+                    Depois de enganchar um Sobrevivente, a Aura  de todos os outros Sobreviventes será revelada a você por 4 segundos quando eles estiverem a 52 metros do Gancho.<br>
+                    Cada vez que um Sobrevivente é enganchado pela primeira vez, ganhe um bônus acumulativo de 15 % para todos os Pontos de Sangue ganhos na partida.
+                `
+            },
+            {
+                img: 'bambooozle.png',
+                description: `
+                    Depois de saltar uma janela Bamboozle invoca a Entidade para bloquear essa janela pelos próximos 8/12/16 segundos. <br>
+                    Janelas bloqueadas não podem ser recuperadas por sobreviventes.<br>
+                    Aumenta sua velocidade geral de salto em 5 / 10 / 15 % .
                 `
             }
         ]

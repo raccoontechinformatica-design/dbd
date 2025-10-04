@@ -1,13 +1,13 @@
 const itemList = document.querySelector('#itemlist');
 
 const killers = [
-  { value: "o cacador", name: "O caçador" },
-  { value: "o espectro", name: "O espectro" },
-  { value: "o caipira", name: "O caipira" },
+  { value: "trapper", name: "O caçador" },
+  { value: "wraight", name: "O espectro" },
+  { value: "billy", name: "O caipira" },
   { value: "nurse", name: "A enfermeira" },
   { value: "meyers", name: "O vulto" },
-  { value: "a cacadora", name: "A caçadora" },
-  { value: "bruxa", name: "A bruxa" },
+  { value: "huntress", name: "A caçadora" },
+  { value: "hag", name: "A bruxa" },
   { value: "doctor", name: "O doutor" },
   { value: "buba", name: "O canibal" },
   { value: "pig", name: "A porca" },
@@ -15,7 +15,10 @@ const killers = [
   { value: "spirit", name: "O espírito" },
   { value: "legion", name: "A legião" },
   { value: "clown", name: "O palhaço" },
-  { value: "pyramid head", name: "O carrasco" }
+  { value: "plague", name: "A praga" },
+  { value: "ghost face", name: "Ghost face" },
+  { value: "pyramid head", name: "O carrasco" },
+  { value: "demogorgon", name: "O demogorgon" },
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -37,8 +40,6 @@ function doSearch(value) {
     
     console.log({found})
 
-    mainDropdown.innerHTML = '';
-
     if(value.length === 0) {
         fillKillers(killers);
         return;
@@ -55,7 +56,7 @@ function createDropdown() {
     // sumTitle.id = 'search';
     
     const params = new URLSearchParams(window.location.search);
-    const killerParam = params.get('killer') ? params.get('killer') : 'o cacador';
+    const killerParam = params.get('killer') ? params.get('killer') : 'trapper';
     sumTitle.innerText = killers.find(killer => killer.value === killerParam).name;
 
     const search = document.createElement('input');
@@ -79,6 +80,7 @@ function createDropdown() {
         // sumTitle.focus();
         if(dropdown.open) {
             search.focus();
+            search.value = '';
         }
         fillKillers(killers);
     });
@@ -97,9 +99,6 @@ function createDropdown() {
          debounce(doSearch(e.target.value), 100);
     })
 
-    
-
-
     fillKillers(killers);
     
 }
@@ -109,9 +108,13 @@ function fillKillers(killers) {
     const dropdown  = document.querySelector('.dropdown details');
     const dropdownSum  = document.querySelector('.dropdown summary'); 
 
+    // Substitui o conteúdo anterior
+    mainDropdown.innerHTML = '';
+
     killers.forEach(killer => {
         const a = document.createElement("a");
         a.href = "javascript:void(0)";
+        a.title = killer.value.toUpperCase();
         a.textContent = killer.name;
         a.classList.add("dropdown-item");
         a.dataset.value = killer.value;

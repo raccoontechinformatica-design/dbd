@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // selectKiller.value = params.get('killer') ? params.get('killer') : 'o cacador';
   
-    switchVal(params.get('killer') ? params.get('killer') : 'o cacador'); 
+    switchVal(params.get('killer') ? params.get('killer') : 'trapper'); 
     // selectKiller.dispatchEvent(new Event('change'));
     // watchSidebar();
     await fx();
@@ -107,9 +107,7 @@ async function fx(notFirst = true) {
 }
 
 
-
 // set complementos
-
 function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, skills, bg, sidebarHtml }) {
     // set img
     const comp1 = document.querySelector(`.comp[data-num="1"]`);

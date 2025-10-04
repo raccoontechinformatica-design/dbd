@@ -94,6 +94,7 @@
     </div>
 
     <script src="script.js?cb=<?php echo time(); ?>"></script>
+    <script src="addons_perks.js?cb=<?php echo time(); ?>"></script>
     <script src="killers.js?cb=<?php echo time(); ?>"></script>
     <script src="dropdown.js?cb=<?php echo time(); ?>"></script>
 

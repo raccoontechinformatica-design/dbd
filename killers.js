@@ -41,6 +41,8 @@ function switchVal(value) {
             return demogorgon();
         case 'oni':
             return oni();
+        case 'blight':
+            return blight();
     }
 }
 
@@ -954,4 +956,9 @@ function oni() {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/_RlGsuyqGI4?si=jLwdHm3ElJCRspZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `
     })
+}
+
+function blight() {
+    reset('bg_blight.png');
+    document.querySelector('#container .bg').style.backgroundSize = '100% 99%';
 }

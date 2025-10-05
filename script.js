@@ -239,10 +239,11 @@ function reset(bg) {
     slices.style.display = 'none';
     const sidebarContent = document.querySelector('#sidebar-content');
     sidebarContent.innerHTML = '';
+    document.querySelector('.main').style.display = 'block';
 
     setComp({
         bg,
-    })
+    });
 }
 
 function toggleWallpaper() {

@@ -19,6 +19,7 @@ const killers = [
   { value: "ghost face", name: "Ghost face" },
   { value: "demogorgon", name: "O demogorgon" },
   { value: "oni", name: "O oni" },
+  { value: "blight", name: "O flagelo" },
   { value: "pyramid head", name: "O carrasco" },
 ];
 

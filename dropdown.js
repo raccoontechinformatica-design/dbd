@@ -17,8 +17,9 @@ const killers = [
   { value: "clown", name: "O palhaço" },
   { value: "plague", name: "A praga" },
   { value: "ghost face", name: "Ghost face" },
-  { value: "pyramid head", name: "O carrasco" },
   { value: "demogorgon", name: "O demogorgon" },
+  { value: "oni", name: "O oni" },
+  { value: "pyramid head", name: "O carrasco" },
 ];
 
 document.addEventListener('DOMContentLoaded', function() {

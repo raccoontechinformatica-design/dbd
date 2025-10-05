@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     await fx();
 
     hasOverflowSidebar();
+
+    const btnToggleWallpaper = document.querySelector('#toggleWallpaper');
+    btnToggleWallpaper.onclick = () => toggleWallpaper();
 });
 
 document.addEventListener("selectKiller", async (e) => {
@@ -59,7 +62,38 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function fx(notFirst = true) {
+function firstAnimation(delayProp = 500) {
+    const header = document.querySelector('#header');
+    const sidebar = document.querySelector('#sidebar');
+    const content = document.querySelector('#container > div:not(.bg)');
+
+    const elements = [header, sidebar, content].filter(Boolean);
+
+    // cria um array de Promises que resolvem quando a transição termina
+    const promises = elements.map((el, index) => {
+        return new Promise(resolve => {
+            const delay = delayProp; // 500ms entre cada
+            setTimeout(() => {
+                const currentOpacity = parseFloat(getComputedStyle(el).opacity);
+                el.style.opacity = currentOpacity === 0 ? 1 : 0;
+
+                // escuta o fim da transição
+                const handler = (e) => {
+                    if (e.propertyName === 'opacity') { // garante que é a transição de opacity
+                        el.removeEventListener('transitionend', handler);
+                        resolve();
+                    }
+                };
+                el.addEventListener('transitionend', handler);
+            }, delay);
+        });
+    });
+
+    // espera todas terminarem
+    return Promise.all(promises);
+}
+
+async function opacityFx(notFirst = true) {
     const imgs = document.querySelectorAll(`
         #slices img.icons,
         .section-skill .thumbnail,
@@ -104,6 +138,13 @@ async function fx(notFirst = true) {
         text.style.opacity = '1';
         text.style.fontSize = '12px';
     });
+}
+
+async function fx(notFirst = true) {
+
+    await firstAnimation(200);
+
+    await opacityFx(notFirst);
 }
 
 
@@ -202,4 +243,36 @@ function reset(bg) {
     setComp({
         bg,
     })
+}
+
+function toggleWallpaper() {
+  const header = document.querySelector('#header');
+  const sidebar = document.querySelector('#sidebar');
+  const content = document.querySelector('#container div:not(.bg)');
+
+  [header, sidebar, content].forEach((element) => {
+    if (!element) return; // evita erro se for null
+
+    // pega o valor atual real (do CSS ou inline)
+    const currentOpacity = parseFloat(getComputedStyle(element).opacity);
+
+    // alterna entre 0 e 1
+    element.style.opacity = currentOpacity === 0 ? 1 : 0;
+  });
+}
+
+function showWallpaperFirst() {
+    const header = document.querySelector('#header');
+    const sidebar = document.querySelector('#sidebar');
+    const content = document.querySelector('#container div:not(.bg)');
+
+      [header, sidebar, content].forEach((element) => {
+        if (!element) return; // evita erro se for null
+
+        // pega o valor atual real (do CSS ou inline)
+        const currentOpacity = parseFloat(getComputedStyle(element).opacity);
+
+        // alterna entre 0 e 1
+        element.style.opacity = currentOpacity === 0 ? 1 : 0;
+    });
 }

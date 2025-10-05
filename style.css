@@ -19,6 +19,9 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main {
@@ -644,3 +647,42 @@ div#itemlist {
     }
 }
 
+
+
+.icon button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 111;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon button svg {
+    /* fill: #000; */
+    width: inherit;
+    height: inherit;
+}
+
+.icon button svg path {
+    stroke: #fff;
+
+}
+
+#header,
+#sidebar,
+#container > div:not(.bg) {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.bg {
+    opacity: 1!important;
+}

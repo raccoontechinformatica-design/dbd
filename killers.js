@@ -39,6 +39,8 @@ function switchVal(value) {
             return ghost();
         case 'demogorgon':
             return demogorgon();
+        case 'oni':
+            return oni();
     }
 }
 
@@ -876,7 +878,80 @@ function demogorgon() {
                     Janelas bloqueadas não podem ser recuperadas por sobreviventes.<br>
                     Aumenta sua velocidade geral de salto em 5 / 10 / 15 % .
                 `
+            },
+            {
+                img: '108f71d5-1a89-42d7-bb20-f8e6c887b92a_removalai_preview_11.png',
+                description: `
+                    Suas orações invocam um poder sombrio que interfere nas chances de sobrevivência.<br>
+                    Os 3 Geradores mais distantes de você são bloqueados pela Entidade por 80 segundos no começo da partida.<br>
+                `
+            },
+            {
+                img: 'images-removebg-preview.png',
+                description: `
+                    Todos os geradores afetados são destacados em amarelo .<br>
+                    A próxima vez que qualquer Sobrevivente<br>
+                    entra no estado de morte<br>
+                    de qualquer forma, todos os Geradores afetados explodem e imediatamente começam a regredir, o que remove a Aura destacada.
+                    Faz o Gerador regredir instantaneamente em -10% de sua Progressão máxima possível.
+                    Faz com que todos os Sobreviventes que consertam os Geradores afetados gritem e revelem sua Aura<br>
+                    para você por 8 / 10 / 12 segundos .
+                `
             }
         ]
+    })
+}
+
+function oni() {
+    setComp({
+        bg: 'bg_oni.jpg',
+        killerImg: 'The_Oni.webp',
+        powerImg: '008as7fad.png',
+        img1: '00as8f.png',
+        desc1: 'Aumenta a duração da Fúria Sangrenta em +8 segundos .',
+        img2: '0sa5.png',
+        desc2: `
+            Aumenta a frequência de geração de Orbes de Sangue de Sobreviventes feridos em +33% .<br>
+            Aumenta o número de Orbes de Sangue gerados quando Sobreviventes realizam interações específicas em +1 .
+        `,
+        skills: [
+            {
+                img: 'barbecue-chili.webp',
+                description: `
+                    Uma profunda conexão com a Entidade  desbloqueia o potencial na capacidade de leitura da Aura.<br>
+                    Depois de enganchar um Sobrevivente, a Aura  de todos os outros Sobreviventes será revelada a você por 4 segundos quando eles estiverem a 52 metros do Gancho.<br>
+                    Cada vez que um Sobrevivente é enganchado pela primeira vez, ganhe um bônus acumulativo de 15 % para todos os Pontos de Sangue ganhos na partida.
+                `
+            },
+            {
+                img: 'arruinar.png',
+                description: `
+                    Um feitiço que afeta o progresso do reparo do gerador de todos os sobreviventes.
+                    <br>Sempre que um gerador não estiver sendo reparado por um Sobrevivente, ele regredirá imediata e automaticamente seu progresso de Reparo em 50 / 75 / 100 % da velocidade normal de Regressão.
+                `
+            },
+            {
+                img: 'whats-a-perk-that-you-know-its-not-op-at-all-but-you-get-v0-og0ybtsr2wdf1.png',
+                description: `
+                    Os sobreviventes sofrem dos Efeitos de Status Amaldiçoado  e Desatento  até o Feitiço: Brinquedinho ser purificado.<br>
+                    Pela primeira vez, 90 seconds, apenas o sobrevivente Amaldiçoado pode purificar o totem enfeitiçado.<br>
+                    A Aura  do totem enfeitiçado do Feitiço: Brinquedinho é revelada ao sobrevivente Amaldiçoado dentro de .
+                `
+            },
+            {
+                img: 'so-how-old-where-you-when-you-realized-hex-pentimento-a-v0-5x439tjxgxhd1.png',
+                description: `
+                    Para cada Totem Reacendido, Hex: Pentimento ganha +1 Ficha, até um máximo de 5 Fichas:<br>
+                    1 Ficha: Reduz a velocidade de ação para Cura e Reparo em -20%.<br>
+                    2 a 5 Fichas: Aumenta a força da penalidade de Velocidade de Ação em 1 / 2 / 3 % por Ficha, até um máximo de 24 / 28 / 32%.<br>
+                    Sobreviventes amaldiçoados por Hex: Pentimento veem as Auras dos Totens Reacendidos a 16 metros.<br>
+                    Quando Hex: Pentimento atingir seu limite de 5 Tokens, ele invoca A Entidade para o seguinte efeito:<br>
+                    Bloqueia todos os Totens Reacendidos pelo restante do Teste.<br>
+                `
+            },
+        ],
+        sidebarHtml: `
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_RlGsuyqGI4?si=jLwdHm3ElJCRspZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `
     })
 }

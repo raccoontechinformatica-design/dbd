@@ -142,7 +142,7 @@ async function opacityFx(notFirst = true) {
 
 async function fx(notFirst = true) {
 
-    await firstAnimation(200);
+    await firstAnimation(650);
 
     await opacityFx(notFirst);
 }
@@ -196,13 +196,18 @@ function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, s
     if(skills && skills.length != 0) {
         skills.forEach((skill, index) => {
             const skillEl = skillEls[index];
+            if(!skillEl) return;
             skillEl.innerHTML = '';
             
             const thumbnail = document.createElement('img');
+            if(!thumbnail) return;
+
             thumbnail.classList.add('thumbnail');
             thumbnail.src = `assets/perks/${skill.img}`;
 
             const descEl = document.createElement('div');
+            if(!descEl) return;
+
             descEl.classList.add('text');
             descEl.innerHTML = skill.description;
 
@@ -246,7 +251,7 @@ function reset(bg) {
     });
 }
 
-function toggleWallpaper() {
+async function toggleWallpaper() {
   const header = document.querySelector('#header');
   const sidebar = document.querySelector('#sidebar');
   const content = document.querySelector('#container div:not(.bg)');
@@ -260,6 +265,7 @@ function toggleWallpaper() {
     // alterna entre 0 e 1
     element.style.opacity = currentOpacity === 0 ? 1 : 0;
   });
+
 }
 
 function showWallpaperFirst() {

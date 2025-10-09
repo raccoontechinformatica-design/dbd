@@ -43,6 +43,10 @@ function switchVal(value) {
             return oni();
         case 'blight':
             return blight();
+        case 'deathslinger':
+            return deathslinger();
+        case 'twins':
+            return twins();
     }
 }
 
@@ -961,4 +965,106 @@ function oni() {
 function blight() {
     reset('bg_blight.png');
     document.querySelector('#container .bg').style.backgroundSize = '100% 99%';
+}
+
+function deathslinger() {
+    setComp({
+        killerImg: 'DBD_Killer_Deathslinger_only_ffbf514957.png',
+        powerImg: 'mercenariolatest.png',
+        img1: 'charutodapaz.png',
+        desc1: `
+            Diminui em 1s a duração do atordoamento que ocorre quando um Sobrevivente se liberta.
+        `,
+        img2: 'addon0_n.png',
+        desc2: `
+            Diminui em 0,35s o tempo de recarregar do Redentor.
+        `,
+        bg: 'bg_deathslinger.webp',
+        skills: [
+            {
+                img: 'save-the-best-for-last.png',
+                description: `
+                    Sempre que você atingir um Sobrevivente diferente da sua Obsessão
+                    com um Ataque Básico , Guarde o Melhor para o Final ganha +1 Ficha , até um máximo de 6 / 7 / 8 Fichas :<br>
+                    Concede uma redução de -4% no tempo de recarga em Ataques Básicos bem-sucedidos por Ficha, até um máximo de 24 / 28 / 32 % .<br>
+                    Sempre que você atingir sua Obsessão com um Ataque Básico ou Especial , Guarde o Melhor para o Final perde -2 Fichas .
+                `
+            },
+            {
+                img: 'abracosinistroimages.png',
+                description: `
+                    Após fisgar um Sobrevivente pela primeira vez, você ganha um ponto, e quando você atingir quatro pontos (ou seja, fisgar todos os quatro Sobreviventes uma vez), todos os geradores restantes serão bloqueados pela Entidade por um período significativo, revelando a aura da Obsessão.
+                `
+            },
+            {
+                img: 'bacf577f-a9d2-4cca-aeca-a2cef44acdac_removalai_preview.png',
+                description: `
+                    Você fica obcecado por um Sobrevivente.<br>
+                    Depois de enganchar a Obsessão, Garantia do Morto ativa por 35 segundos.<br>
+                    Se um Sobrevivente parar de reparar um Gerador antes de terminar os reparos, enquanto a habilidade estiver ativa, a Entidade bloqueia o Gerador até o fim do efeito da Garantia do Morto.
+                `
+            },
+            {
+                img: '7f9fac6b-915b-4c7c-9125-d3e030785c28_removalai_preview.png',
+                description: `
+                    Você fica animado na expectativa de enganchar sua presa. Aumenta sua velocidade durante o transporte de corpos em 6/12/18 %. Ao transportar um corpo, seu Raio de Terror é aumentado em 0/3/6 metros.
+                `
+            }
+        ],
+        sidebarHtml: `
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YfL3WPU8nyE?si=zuLREKZL4KMlhkjD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `
+    });
+}
+
+function twins() {
+    setComp({
+        bg: 'bg_twins.jpg',
+        powerImg: '0asf.png',
+        killerImg: 'DBD_Killer_Twins_only_525459f74d.png',
+        img1: '008as7faa.png',
+        desc1: `
+            Aumenta sua velocidade de movimento ao controlar Victor em +0,6 m/s .
+        `,
+        img2: '0addsf.png',
+        desc2: `
+            Reduz o tempo de carga de um ataque em -0,1 segundo .
+        `,
+        skills: [
+            {
+                img: '108f71d5-1a89-42d7-bb20-f8e6c887b92a_removalai_preview_11.png',
+                description: `
+                    Suas orações invocam um poder sombrio que interfere nas chances de sobrevivência.<br>
+                    Os 3 Geradores mais distantes de você são bloqueados pela Entidade por 80 segundos no começo da partida.<br>
+                `
+            },
+            {
+                img: '0saasdasdsadasf.png',
+                description: `
+                    Sobreviventes que recebem um Golpe de Proteção sofrem com o Quebrado
+                    <br>
+                    Efeito de status pelos próximos 60 / 70 / 80 segundos .
+
+                `
+            },
+            {
+                img: 'asdasdssdasa.png',
+                description: `
+                    Quando um Sobrevivente interage com um Interruptor de Portão de Saída, você recebe uma Notificação de Ruído Alto e a Entidade
+                    bloqueia ambos os interruptores do portão de saída<br>
+                    por 12 segundos e mais 6 / 9 / 12 segundos por Token em sua posse, até um máximo combinado de 36 / 48 / 60 segundos .
+
+                `
+            },
+            {
+                img: 'porcashufasdfg.png',
+                description: `
+                    Ferimentos infligidos por Ataques Básicos fazem com que os Sobreviventes sofram de Hemorragia e mutilado<br>
+                    Efeitos de status por 70/80/90 segundos .​​<br>
+                    Aumenta a frequência de sangramento de sobreviventes feridos em 50 / 75 / 100 % pela mesma duração.<br>
+                    Aumenta a taxa de regressão na qual a progressão parcial da cura é perdida devido à hemorragia em +25% .
+                `
+            }
+        ]
+    });
 }

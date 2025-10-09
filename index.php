@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7044182148289142"
+     crossorigin="anonymous"></script>
     <title>Build Dead By Daylight</title>
 </head>
 <body>
@@ -108,6 +109,7 @@
     <script src="addons_perks.js?cb=<?php echo time(); ?>"></script>
     <script src="killers.js?cb=<?php echo time(); ?>"></script>
     <script src="dropdown.js?cb=<?php echo time(); ?>"></script>
+
 
     <script>
         

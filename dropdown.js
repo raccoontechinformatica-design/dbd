@@ -20,7 +20,9 @@ const killers = [
   { value: "demogorgon", name: "O demogorgon" },
   { value: "oni", name: "O oni" },
   { value: "blight", name: "O flagelo" },
+  { value: "deathslinger", name: "O mercenário" },
   { value: "pyramid head", name: "O carrasco" },
+  { value: "twins", name: "Os gêmeos" },
 ];
 
 document.addEventListener('DOMContentLoaded', function() {

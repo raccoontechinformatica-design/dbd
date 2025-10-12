@@ -23,6 +23,7 @@ const killers = [
   { value: "deathslinger", name: "O mercenário" },
   { value: "pyramid head", name: "O carrasco" },
   { value: "twins", name: "Os gêmeos" },
+  { value: "trickster", name: "O trapaça" },
 ];
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -142,7 +142,7 @@ async function opacityFx(notFirst = true) {
 
 async function fx(notFirst = true) {
 
-    await firstAnimation(650);
+    await firstAnimation(800);
 
     await opacityFx(notFirst);
 }
@@ -282,4 +282,11 @@ function showWallpaperFirst() {
         // alterna entre 0 e 1
         element.style.opacity = currentOpacity === 0 ? 1 : 0;
     });
+}
+
+
+function randomKiller() {
+    let random = killers[Math.floor(Math.random()*killers.length)];
+    window.location.href = '?killer=' + random.value;
+    console.log({random})
 }

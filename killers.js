@@ -47,6 +47,10 @@ function switchVal(value) {
             return deathslinger();
         case 'twins':
             return twins();
+        case 'random':
+            return randomKiller();
+        case 'trickster':
+            return trickster();
     }
 }
 
@@ -59,7 +63,7 @@ function cacador() {
         killerImg: 'DBD_Killer_Trapper_only_335b9655b2.png',
         oferendaImg: 'Ach_crippleThemAll.webp',
         powerImg: 'Ach_crippleThemAll.webp',
-        bg: 'bg1.jpeg',
+        bg: 'enhanced_bg1.png',
         skills: [
             {
                 img: '108f71d5-1a89-42d7-bb20-f8e6c887b92a_removalai_preview_03.png',
@@ -99,7 +103,7 @@ function cacadora() {
         killerImg: 'DBD_Killer_Huntress_only_7510a188be.png',
         oferendaImg: 'Ach_adeptHuntress.webp',
         powerImg: 'Ach_adeptHuntress.webp',
-        bg: 'bg_hunters.jpg',
+        bg: 'bg_hunters.png',
         skills: [
             {
                 img: 'barbecue-chili.webp',
@@ -134,7 +138,7 @@ function espectro() {
         killerImg: 'DBD_Killer_Wraith_only_23c19dc579.png',
         oferendaImg: 'Ach_jumpScares.webp',
         powerImg: 'Ach_jumpScares.webp',
-        bg: 'bg_espectro.png',
+        bg: 'bg_wraith.png',
         skills: [
             {
                 img: 'Screenshot_2025-09-20_041328-removebg-preview.png',
@@ -220,7 +224,7 @@ O recurso " I'm All Ears" só pode ser acionado uma vez a cada 60/45/30 segundos
 
 function caipira() {
     setComp({
-        bg: 'bg_caipira.png',
+        bg: 'bg_hillbilly.png',
         killerImg: 'K03_TheHillbilly_Portrait.webp',
         powerImg: 'caipira_k.png',
         img1: 'FulliconAddon_loProChains.png',
@@ -278,7 +282,7 @@ function nurse() {
 function meyers() {
     setComp({
         killerImg: 'K05_TheShape_Portrait.webp',
-        bg: 'bg_meyers.jpg',
+        bg: 'bg_meyers.png',
         powerImg: 'Screenshot 2025-09-22 025200.png',
         img1: 'Screenshot 2025-09-22 025450.png',
         img2: 'Screenshot 2025-09-22 025724.png',
@@ -341,7 +345,7 @@ function meyers() {
 
 function bruxa() {
     setComp({
-        bg: 'bg_hag.webp',
+        bg: 'bg_hag.png',
         killerImg: 'K06_TheHag_Portrait.webp',
         img1: 'latestabvdfws1.png',
         desc1: `
@@ -402,7 +406,7 @@ function doctor() {
     setComp({
         killerImg: 'doctor.webp',
         img1: 'herman.png',
-        bg: 'bg_doctor.jpg',
+        bg: 'bg_doctor.png',
         powerImg: 'Screenshot 2025-09-25 212516 (1).png',
         desc1: `
             Reduz o atraso de detonação do Ataque de Terapia de Choque em -0,2 segundos .<br>
@@ -529,7 +533,7 @@ function spirit() {
 
 function freddy() {
     setComp({
-        bg: 'bg_fred.jpg',
+        bg: 'bg_fred.png',
         img1: '0as0f (1).png',
         desc1: `
             Usar a Projeção de Sonhos ativa o Instinto Assassino por 4 segundos em todos os Sobreviventes em um raio de 16 metros do Gerador para onde você se teletransportou.
@@ -857,7 +861,7 @@ function ghost() {
 
 function demogorgon() {
     setComp({
-        bg: 'bg_demogorgon.jpg',
+        bg: 'bg_demogorgon.png',
         powerImg: '008as7f.png',
         img1: '008as7f.png',
         desc1: `
@@ -979,7 +983,7 @@ function deathslinger() {
         desc2: `
             Diminui em 0,35s o tempo de recarregar do Redentor.
         `,
-        bg: 'bg_deathslinger.webp',
+        bg: 'bg_mercenario.jpg',
         skills: [
             {
                 img: 'save-the-best-for-last.png',
@@ -1067,4 +1071,41 @@ function twins() {
             }
         ]
     });
+}
+
+function trickster() {
+    setComp({
+        bg: 'bg_trickster.png',
+        powerImg: '08sa7f.png',
+        img1: '0imgds.png',
+        desc1: 'Aumenta sua velocidade de movimento no estado de arremesso em +0,1 m/s .',
+        img2: '4105a.png',
+        desc2: 'Aumenta a duração do Evento Principal em +0,4 segundos para cada Golpe de Lâmina bem-sucedido .',
+        killerImg: 'DBD_Killer_Trickster_only_d4def7ebe7.png',
+        skills: [
+            {
+                img: 'sadasdasd.png',
+                description: `
+                    Quando você vasculha Armários , as Auras de todos os Sobreviventes a 8 metros de todos os armários ficam expostas para você por 3/4/5 segundos.<br>
+                    Esta vantagem tem um tempo de recarga de 30 segundos.
+
+                `
+            },
+            {
+                img: 'imagessdsfsdfsdfdsd.png',
+                description: `
+                    As Auras dos Ganchos brancos são reveladas a você<br>
+                    Cada vez que um Sobrevivente é desenganchado de um Gancho do Flagelo , os seguintes efeitos se aplicam:<br>
+                    O Sobrevivente sofre os efeitos de Hemorragia e Status Mutilado até ser curado.<br>
+                    Ao ser curado, o Sobrevivente sofre uma penalidade de 7 / 8 / 9  % na Velocidade de Ação para Cura e Reparo até ser ferido novamente.
+                `
+            },
+            {
+                img: '108f71d5-1a89-42d7-bb20-f8e6c887b92a_removalai_preview_05%20(1).png',
+                description: `
+                    Em cada partida, 4 Ganchos aleatórios viram Ganchos do Tormento. Quando um Sobrevivente é enganchado em um Gancho do Tormento, o gerador com mais progresso explode e perde progresso. Os Sobreviventes que estiverem reparando esse gerador vão gritar e revelar a própria localização.
+                `
+            }
+        ]
+    })
 }

@@ -190,11 +190,11 @@ function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, s
     
 
     const killer = document.querySelector(`#killerImg`);
-    killer.src = endpoint +  `${endpoint}assets/killers/${killerImg}`;
+    killer.src =  `${endpoint}assets/killers/${killerImg}`;
 
     // poder
     const power = document.querySelector('img#poder');
-    power.src = endpoint + `${endpoint}assets/killers/${powerImg}`;
+    power.src = `${endpoint}assets/killers/${powerImg}`;
 
     //bg
     const backgROUD = document.querySelector('#container .bg');

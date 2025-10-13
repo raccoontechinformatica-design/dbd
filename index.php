@@ -110,7 +110,7 @@
         O projeto foi concebido com o objetivo de mostrar as perks utilizada pelo Famz, reunindo informações detalhadas para auxiliar jogadores na construção de estratégias e combinações dentro do jogo.
     </div>
 
-    <script src="script.js?cb=<?php echo time(); ?>&isExternal=1" data-name="script"></script>
+    <script src="script.js?cb=<?php echo time(); ?>" data-name="script"></script>
     <script src="addons_perks.js?cb=<?php echo time(); ?>" data-name="addons_perks"></script>
     <script src="killers.js?cb=<?php echo time(); ?>" data-name="killers"></script>
     <script src="dropdown.js?cb=<?php echo time(); ?>" data-name="dropdown"></script>

@@ -151,18 +151,23 @@ async function fx(notFirst = true) {
 // set complementos
 function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, skills, bg, sidebarHtml }) {
 
-    const script = document.currentScript;
-    const url = new URL(script.src);
-    const isExternal = url.searchParams.get("isExternal");
-    console.log({isExternal})
+   const script = document.querySelector('script[data-name="script"]');
 
+    const url = new URL(script?.src);
+    const isExternal = url.searchParams.get("isExternal");
+
+    let endpoint = '';
+    
+    if(isExternal && JSON.parse(isExternal)) {
+        endpoint = 'https://painel.raccoontech.info/services/dbd/';
+    }
 
     // set img
     const comp1 = document.querySelector(`.comp[data-num="1"]`);
     const comp2 = document.querySelector(`.comp[data-num="2"]`);
 
-    comp1.src = `assets/perks/${img1}`;
-    comp2.src = `assets/perks/${img2}`;
+    comp1.src = endpoint + `assets/perks/${img1}`;
+    comp2.src = endpoint +  `assets/perks/${img2}`;
 
     // set description
     const comp1Desc = document.querySelector(`.compDesc[data-num="1"]`);
@@ -185,15 +190,15 @@ function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, s
     
 
     const killer = document.querySelector(`#killerImg`);
-    killer.src = `assets/killers/${killerImg}`;
+    killer.src = endpoint +  `${endpoint}assets/killers/${killerImg}`;
 
     // poder
     const power = document.querySelector('img#poder');
-    power.src = `assets/killers/${powerImg}`;
+    power.src = endpoint + `${endpoint}assets/killers/${powerImg}`;
 
     //bg
     const backgROUD = document.querySelector('#container .bg');
-    backgROUD.style.backgroundImage = `url("assets/${bg}")`;
+    backgROUD.style.backgroundImage = `url("${endpoint}assets/${bg}")`;
 
     // skills
 
@@ -210,7 +215,7 @@ function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, s
             if(!thumbnail) return;
 
             thumbnail.classList.add('thumbnail');
-            thumbnail.src = `assets/perks/${skill.img}`;
+            thumbnail.src = `${endpoint}assets/perks/${skill.img}`;
 
             const descEl = document.createElement('div');
             if(!descEl) return;

@@ -150,6 +150,13 @@ async function fx(notFirst = true) {
 
 // set complementos
 function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, skills, bg, sidebarHtml }) {
+
+    const script = document.currentScript;
+    const url = new URL(script.src);
+    const isExternal = url.searchParams.get("isExternal");
+    console.log({isExternal})
+
+
     // set img
     const comp1 = document.querySelector(`.comp[data-num="1"]`);
     const comp2 = document.querySelector(`.comp[data-num="2"]`);

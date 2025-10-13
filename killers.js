@@ -1085,15 +1085,7 @@ function trickster() {
         skills: [
             {
                 img: 'sadasdasd.png',
-                description: `
-                    Quando você vasculha Armários , as Auras de todos os Sobreviventes a 8 metros de todos os armários ficam expostas para você por 3/4/5 segundos.<br>
-                    Esta vantagem tem um tempo de recarga de 30 segundos.
-
-                `
-            },
-            {
-                img: 'imagessdsfsdfsdfdsd.png',
-                description: `
+                   description: `
                     As Auras dos Ganchos brancos são reveladas a você<br>
                     Cada vez que um Sobrevivente é desenganchado de um Gancho do Flagelo , os seguintes efeitos se aplicam:<br>
                     O Sobrevivente sofre os efeitos de Hemorragia e Status Mutilado até ser curado.<br>
@@ -1101,9 +1093,24 @@ function trickster() {
                 `
             },
             {
+                img: 'imagessdsfsdfsdfdsd.png',
+                description: `
+                    Quando você vasculha Armários , as Auras de todos os Sobreviventes a 8 metros de todos os armários ficam expostas para você por 3/4/5 segundos.<br>
+                    Esta vantagem tem um tempo de recarga de 30 segundos.
+
+                `
+             
+            },
+            {
                 img: '108f71d5-1a89-42d7-bb20-f8e6c887b92a_removalai_preview_05%20(1).png',
                 description: `
                     Em cada partida, 4 Ganchos aleatórios viram Ganchos do Tormento. Quando um Sobrevivente é enganchado em um Gancho do Tormento, o gerador com mais progresso explode e perde progresso. Os Sobreviventes que estiverem reparando esse gerador vão gritar e revelar a própria localização.
+                `
+            },
+            {
+                img: '7f9fac6b-915b-4c7c-9125-d3e030785c28_removalai_preview.png',
+                description: `
+                    Você fica animado na expectativa de enganchar sua presa. Aumenta sua velocidade durante o transporte de corpos em 6/12/18 %. Ao transportar um corpo, seu Raio de Terror é aumentado em 0/3/6 metros.
                 `
             }
         ]

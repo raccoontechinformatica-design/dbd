@@ -51,6 +51,8 @@ function switchVal(value) {
             return randomKiller();
         case 'trickster':
             return trickster();
+        case 'nemesis':
+            return nemesis();
     }
 }
 
@@ -1111,6 +1113,54 @@ function trickster() {
                 img: '7f9fac6b-915b-4c7c-9125-d3e030785c28_removalai_preview.png',
                 description: `
                     Você fica animado na expectativa de enganchar sua presa. Aumenta sua velocidade durante o transporte de corpos em 6/12/18 %. Ao transportar um corpo, seu Raio de Terror é aumentado em 0/3/6 metros.
+                `
+            }
+        ]
+    })
+}
+
+function nemesis() {
+    setComp({
+        bg: 'bg_nemesis.png',
+        powerImg: 'nem0saf.png',
+        img1: 'aqa00amg.png',
+        desc1: `
+            Aumenta o ganho na taxa de mutação após atingir sobreviventes com um ataque de tentáculo em +0,5 pontos .
+        `,
+        img2: 'IMGADDONee.png',
+        desc2: `
+            Aumenta a duração do impedido<br>
+            Efeito de status ao se tornar contaminado por +1 segundo .
+        `,
+        killerImg: 'DBD_Killer_Nemesis_only_1f21d6c597.png',
+        skills: [
+            {
+                img: 'bacf577f-a9d2-4cca-aeca-a2cef44acdac_removalai_preview.png',
+                description: `
+                    Você fica obcecado por um Sobrevivente.<br>
+                    Depois de enganchar a Obsessão, Garantia do Morto ativa por 35 segundos.<br>
+                    Se um Sobrevivente parar de reparar um Gerador antes de terminar os reparos, enquanto a habilidade estiver ativa, a Entidade bloqueia o Gerador até o fim do efeito da Garantia do Morto.
+                `
+            },
+            {
+                img: 'sadasdasd.png',
+                description: `
+                    As Auras dos Ganchos brancos são reveladas a você<br>
+                    Cada vez que um Sobrevivente é desenganchado de um Gancho do Flagelo , os seguintes efeitos se aplicam:<br>
+                    O Sobrevivente sofre os efeitos de Hemorragia e Status Mutilado até ser curado.<br>
+                    Ao ser curado, o Sobrevivente sofre uma penalidade de 7 / 8 / 9  % na Velocidade de Ação para Cura e Reparo até ser ferido novamente.
+                `
+            },
+            {
+                img: '108f71d5-1a89-42d7-bb20-f8e6c887b92a_removalai_preview_05.png',
+                description: `
+                 Em cada partida, 4 Ganchos aleatórios viram Ganchos do Tormento. Quando um Sobrevivente é enganchado em um Gancho do Tormento, o gerador com mais progresso explode e perde progresso. Os Sobreviventes que estiverem reparando esse gerador vão gritar e revelar a própria localização.
+                `
+            },
+            {
+                img: 'erfsdefdsimages.png',
+                description: `
+                    O gerador regride em 115/120/125 % da velocidade normal de regressão e fica com a Aura  exposta para você em amarelo.
                 `
             }
         ]

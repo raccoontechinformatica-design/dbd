@@ -147,9 +147,19 @@ async function fx(notFirst = true) {
     await opacityFx(notFirst);
 }
 
+function getCurrentKiller() {
+    const params = new URLSearchParams(window.location.search);
+    const killerParam = params.get('killer');
+    const killer = killers.find(killer => killer.value === killerParam);
+    return killer;
+}
+
 
 // set complementos
 function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, skills, bg, sidebarHtml }) {
+
+
+    document.title = 'Build: ' + getCurrentKiller().name.toLowerCase();
 
    const script = document.querySelector('script[data-name="script"]');
 

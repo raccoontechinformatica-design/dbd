@@ -24,6 +24,7 @@ const killers = [
   { value: "pyramid head", name: "O carrasco" },
   { value: "twins", name: "Os gêmeos" },
   { value: "trickster", name: "O trapaça" },
+  { value: "nemesis", name: "O nemesis" },
 ];
 
 document.addEventListener('DOMContentLoaded', function() {

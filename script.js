@@ -158,8 +158,12 @@ function getCurrentKiller() {
 // set complementos
 function setComp({ img1, img2, desc1, desc2, killerImg, oferendaImg, powerImg, skills, bg, sidebarHtml }) {
 
+    const name = getCurrentKiller()?.name?.toLowerCase();
 
-    document.title = 'Build: ' + getCurrentKiller().name.toLowerCase();
+    if(name) {
+        document.title = 'Build: ' + name;
+    }
+
 
    const script = document.querySelector('script[data-name="script"]');
 

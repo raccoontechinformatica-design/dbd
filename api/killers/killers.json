@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Ghost Face",
+    "slug": "ghost-face",
+    "picture": "https://assets.deadbydaylight.com/K16_The_Ghostface_979facf1dc.png"
+  },
+  {
+    "title": "O Pesadelo – Freddy Krueger",
+    "slug": "o-pesadelo",
+    "picture": "https://assets.deadbydaylight.com/K10_The_Nightmare_131add6f1e.png"
+  },
+  {
+    "title": "O Oni  ",
+    "slug": "o-oni",
+    "picture": "https://assets.deadbydaylight.com/K18_The_Oni_3f1362ab17.png"
+  },
+  {
+    "title": "A Draga ",
+    "slug": "a-draga",
+    "picture": "https://assets.deadbydaylight.com/K28_The_Dredge_597e4f007c.png"
+  },
+  {
+    "title": "O Nemesis ",
+    "slug": "o-nemesis",
+    "picture": "https://assets.deadbydaylight.com/K24_The_Nemesis_3867264015.png"
+  },
+  {
+    "title": "O Caçador ",
+    "slug": "o-cacador",
+    "picture": "https://assets.deadbydaylight.com/K01_The_Trapper_bd1ca1a3dc.png"
+  },
+  {
+    "title": "O Lich - Vecna",
+    "slug": "the-lich-vecna",
+    "picture": "https://assets.deadbydaylight.com/K36_Vecna_90bc7fcfc2.png"
+  },
+  {
+    "title": "A Artista ",
+    "slug": "a-artista",
+    "picture": "https://assets.deadbydaylight.com/K26_The_Artist_8e717d84eb.png"
+  },
+  {
+    "title": "A Praga",
+    "slug": "a-praga",
+    "picture": "https://assets.deadbydaylight.com/K15_The_Plague_65982ff0aa.png"
+  },
+  {
+    "title": "O Médico ",
+    "slug": "o-medico",
+    "picture": "https://assets.deadbydaylight.com/K07_The_Doctor_c67b86b84a.png"
+  },
+  {
+    "title": "Drácula",
+    "slug": "dracula",
+    "picture": "https://assets.deadbydaylight.com/K37_The_Dark_Lord_fb2d40500f.png"
+  },
+  {
+    "title": "A Porca – Amanda Young",
+    "slug": "a-porca",
+    "picture": "https://assets.deadbydaylight.com/K11_The_Pig_7dc6302667.png"
+  },
+  {
+    "title": "Desconhecido",
+    "slug": "the-unknown",
+    "picture": "https://assets.deadbydaylight.com/K35_The_Unknown_b2ef834889.png"
+  },
+  {
+    "title": "A Caçadora",
+    "slug": "a-cacadora",
+    "picture": "https://assets.deadbydaylight.com/K08_The_Huntress_28b701878e.png"
+  },
+  {
+    "title": "O Espectro",
+    "slug": "o-espectro",
+    "picture": "https://assets.deadbydaylight.com/K02_The_Wraith_d67b566a99.png"
+  },
+  {
+    "title": "A Legião ",
+    "slug": "a-legiao",
+    "picture": "https://assets.deadbydaylight.com/K14_The_Legion_c3dfae2e6c.png"
+  },
+  {
+    "title": "O Vulto – Michael Myers",
+    "slug": "o-vulto",
+    "picture": "https://assets.deadbydaylight.com/K06_The_Shape_7bd066d4a1.png"
+  },
+  {
+    "title": "O Caipira",
+    "slug": "o-caipira",
+    "picture": "https://assets.deadbydaylight.com/K03_The_Hillbilly_2f1d5b9c43.png"
+  },
+  {
+    "title": "O Canibal – Leatherface",
+    "slug": "o-canibal",
+    "picture": "https://assets.deadbydaylight.com/K09_The_Cannibal_6997cf6e40.png"
+  },
+  {
+    "title": "O Cara Legal - Chucky",
+    "slug": "the-good-guy-chucky",
+    "picture": "https://assets.deadbydaylight.com/K34_The_Yerkes_50807f3bfe.png"
+  },
+  {
+    "title": "A Negociante de Crânios ",
+    "slug": "negociante-de-cranios",
+    "picture": "https://assets.deadbydaylight.com/K31_The_Skull_Merchant_c4b2acd80b.png"
+  },
+  {
+    "title": "O Vilão",
+    "slug": "o-vilao",
+    "picture": "https://assets.deadbydaylight.com/K29_The_Master_Mind_5b210a3ff8.png"
+  },
+  {
+    "title": "O Mercenário ",
+    "slug": "o-mercenario",
+    "picture": "https://assets.deadbydaylight.com/K19_The_Deathslinger_671b0b5664.png"
+  },
+  {
+    "title": "Os Gêmeos ",
+    "slug": "os-gemeos",
+    "picture": "https://assets.deadbydaylight.com/K22_The_Twins_d5966e8f64.png"
+  },
+  {
+    "title": "O Trapaça",
+    "slug": "o-trapaca",
+    "picture": "https://assets.deadbydaylight.com/K23_The_Trickster_a939f1e8d1.png"
+  },
+  {
+    "title": "O Cavaleiro",
+    "slug": "o-cavaleiro",
+    "picture": "https://assets.deadbydaylight.com/K30_Theknight_8fa9cce2e3.png"
+  },
+  {
+    "title": "A Enfermeira",
+    "slug": "a-enfermeira",
+    "picture": "https://assets.deadbydaylight.com/K04_The_Nurse_2e0797f24f.png"
+  },
+  {
+    "title": "A Bruxa",
+    "slug": "a-bruxa",
+    "picture": "https://assets.deadbydaylight.com/K05_The_Hag_11de4c0235.png"
+  },
+  {
+    "title": "O Flagelo ",
+    "slug": "o-flagelo",
+    "picture": "https://assets.deadbydaylight.com/K21_The_Blight_b7dff751a9.png"
+  },
+  {
+    "title": "O Palhaço ",
+    "slug": "o-palhaco",
+    "picture": "https://assets.deadbydaylight.com/K12_The_Clown_53a64221fd.png"
+  },
+  {
+    "title": "O Espírito",
+    "slug": "o-espirito",
+    "picture": "https://assets.deadbydaylight.com/K13_The_Spirit_19fd1a1268.png"
+  },
+  {
+    "title": "Demogorgon",
+    "slug": "the-demogorgon",
+    "picture": "https://assets.deadbydaylight.com/K17_The_Demogorgon_90e0dfed89.png"
+  },
+  {
+    "title": "A Onryō – Sadako",
+    "slug": "a-onryo",
+    "picture": "https://assets.deadbydaylight.com/K27_The_Onryo_b36d9cbccd.png"
+  },
+  {
+    "title": "O Carrasco – Cabeça de Pirâmide",
+    "slug": "o-carrasco",
+    "picture": "https://assets.deadbydaylight.com/K20_The_Executioner_1e712e1cf2.png"
+  },
+  {
+    "title": "A Singularidade",
+    "slug": "a-singularidade",
+    "picture": "https://assets.deadbydaylight.com/K32_The_Singularity_8e6f868ca4.png"
+  },
+  {
+    "title": "O Xenomorfo",
+    "slug": "the-xenomorph",
+    "picture": "https://assets.deadbydaylight.com/K33_The_Xenomorph_20e1743620.png"
+  },
+  {
+    "title": "A Mestra da Matilha",
+    "slug": "the-houndmaster",
+    "picture": "https://assets.deadbydaylight.com/K38_The_Houndmaster_f55452d871.png"
+  },
+  {
+    "title": "O Ghoul",
+    "slug": "the-ghoul",
+    "picture": "https://assets.deadbydaylight.com/K39_The_Ghoul_e2d9135332.png"
+  },
+  {
+    "title": "O Animatrônico",
+    "slug": "the-animatronic",
+    "picture": "https://assets.deadbydaylight.com/K40_The_Animatronic_507b43cfae.png"
+  },
+  {
+    "title": "A Krasue",
+    "slug": "the-krasue",
+    "picture": "https://assets.deadbydaylight.com/K41_The_Krasue_41888ad693.png"
+  }
+]

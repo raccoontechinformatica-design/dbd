@@ -1,0 +1,247 @@
+[
+  {
+    "title": "Thalita Lyra",
+    "slug": "thalita-lyra",
+    "picture": "https://assets.deadbydaylight.com/S35_Thalita_Lyra_6f875386a9.png"
+  },
+  {
+    "title": "Dwight Fairfield",
+    "slug": "dwight-fairfield",
+    "picture": "https://assets.deadbydaylight.com/S01_Dwight_Fairfield_faf6e30e4d.png"
+  },
+  {
+    "title": "Alan Wake",
+    "slug": "alan-wake",
+    "picture": "https://assets.deadbydaylight.com/S40_Allan_Wake_a9661bc18e.png"
+  },
+  {
+    "title": "Nea Karlsson",
+    "slug": "nea-karlsson",
+    "picture": "https://assets.deadbydaylight.com/S05_Nea_Karlsson_b8ffd2a8e2.png"
+  },
+  {
+    "title": "Lara Croft",
+    "slug": "lara-croft",
+    "picture": "https://assets.deadbydaylight.com/S43_Lara_Croft_00469efbb3.png"
+  },
+  {
+    "title": "Aestri Yazar",
+    "slug": "aestri-yazar",
+    "picture": "https://assets.deadbydaylight.com/S42_The_Troupe_eca262a1f4.png"
+  },
+  {
+    "title": "Claudette Morel",
+    "slug": "claudette-morel",
+    "picture": "https://assets.deadbydaylight.com/S03_Claudette_Morel_39a5e22d7c.png"
+  },
+  {
+    "title": "Nicolas Cage",
+    "slug": "nicolas-cage",
+    "picture": "https://assets.deadbydaylight.com/S38_Nicolas_Cage_cdcb505534.png"
+  },
+  {
+    "title": "David King",
+    "slug": "david-king",
+    "picture": "https://assets.deadbydaylight.com/S10_David_King_21ec8c72c8.png"
+  },
+  {
+    "title": "Trevor Belmont",
+    "slug": "trevor-belmont",
+    "picture": "https://assets.deadbydaylight.com/S44_Trevor_Belmont_ba63e0039f.png"
+  },
+  {
+    "title": "Sable Ward",
+    "slug": "sable-ward",
+    "picture": "https://assets.deadbydaylight.com/S41_Sable_Ward_e1c0b1b44c.png"
+  },
+  {
+    "title": "Haddie Kaur",
+    "slug": "haddie-kaur",
+    "picture": "https://assets.deadbydaylight.com/S31_Haddie_Kaur_a13e98f944.png"
+  },
+  {
+    "title": "Jane Romero",
+    "slug": "jane-romero",
+    "picture": "https://assets.deadbydaylight.com/S16_Jane_Romero_f71528ac10.png"
+  },
+  {
+    "title": "Detetive David Tapp",
+    "slug": "detetive-david-tapp",
+    "picture": "https://assets.deadbydaylight.com/S12_Detective_David_Tapp_f3feeda804.png"
+  },
+  {
+    "title": "Adam Francis",
+    "slug": "adam-francis",
+    "picture": "https://assets.deadbydaylight.com/S14_Adam_Francis_5fbf921d02.png"
+  },
+  {
+    "title": "Quentin Smith",
+    "slug": "quentin-smith",
+    "picture": "https://assets.deadbydaylight.com/S11_Quentin_Smith_dd9fb56a97.png"
+  },
+  {
+    "title": "Leon S. Kennedy",
+    "slug": "leon-s-kennedy",
+    "picture": "https://assets.deadbydaylight.com/S27_Leon_S_Kennedy_82ba2c58c4.png"
+  },
+  {
+    "title": "Kate Denson",
+    "slug": "kate-denson",
+    "picture": "https://assets.deadbydaylight.com/S13_Kate_Denson_87e129790a.png"
+  },
+  {
+    "title": "Jake Park",
+    "slug": "jake-park",
+    "picture": "https://assets.deadbydaylight.com/S04_Jake_Park_58093f6b6d.png"
+  },
+  {
+    "title": "William \"Bill\" Overbeck",
+    "slug": "william-bill-overbeck",
+    "picture": "https://assets.deadbydaylight.com/S08_William_Bill_Overbeck_1cf421b528.png"
+  },
+  {
+    "title": "Feng Min",
+    "slug": "feng-min",
+    "picture": "https://assets.deadbydaylight.com/S09_Feng_Min_1f4b67fce4.png"
+  },
+  {
+    "title": "Ada Wong",
+    "slug": "ada-wong",
+    "picture": "https://assets.deadbydaylight.com/S32_Ada_Wong_ae4a7a9ab1.png"
+  },
+  {
+    "title": "Vittorio Toscano",
+    "slug": "vittorio-toscano",
+    "picture": "https://assets.deadbydaylight.com/S34_Vittorio_Toscano_8f1939cc98.png"
+  },
+  {
+    "title": "Mikaela Reid",
+    "slug": "mikaela-reid",
+    "picture": "https://assets.deadbydaylight.com/S28_Mikaela_Reid_27c819fd49.png"
+  },
+  {
+    "title": "Jill Valentine",
+    "slug": "jill-valentine",
+    "picture": "https://assets.deadbydaylight.com/S26_Jill_Valentine_46d7c44d94.png"
+  },
+  {
+    "title": "Jonah Vasquez",
+    "slug": "jonah-vasquez",
+    "picture": "https://assets.deadbydaylight.com/S29_Jonah_Vasquez_64e666ce2b.png"
+  },
+  {
+    "title": "Yoichi Asakawa",
+    "slug": "yoichi-asakawa",
+    "picture": "https://assets.deadbydaylight.com/S30_Yoichi_Asakawa_11a23c082a.png"
+  },
+  {
+    "title": "Rebecca Chambers",
+    "slug": "rebecca-chambers",
+    "picture": "https://assets.deadbydaylight.com/S33_Rebecca_Chambers_28a54e19d5.png"
+  },
+  {
+    "title": "Gabriel Soma",
+    "slug": "gabriel-soma",
+    "picture": "https://assets.deadbydaylight.com/S37_Gabriel_Soma_8fd8d20f7e.png"
+  },
+  {
+    "title": "Zarina Kassir",
+    "slug": "zarina-kassir",
+    "picture": "https://assets.deadbydaylight.com/S21_Zarina_Kassir_f38cd9fd22.png"
+  },
+  {
+    "title": "Cheryl Mason",
+    "slug": "cheryl-mason",
+    "picture": "https://assets.deadbydaylight.com/S22_Cheryl_Mason_a7329820f5.png"
+  },
+  {
+    "title": "Felix Richter",
+    "slug": "felix-richter",
+    "picture": "https://assets.deadbydaylight.com/S23_Felix_Richter_ddfba249f6.png"
+  },
+  {
+    "title": "Élodie Rakoto",
+    "slug": "elodie-rakoto",
+    "picture": "https://assets.deadbydaylight.com/S24_Elodie_Rakoto_f45db27b34.png"
+  },
+  {
+    "title": "Yui Kimura",
+    "slug": "yui-kimura",
+    "picture": "https://assets.deadbydaylight.com/S20_Yui_Kimura_4c4351d39a.png"
+  },
+  {
+    "title": "Yun-Jin Lee",
+    "slug": "yun-jin-lee",
+    "picture": "https://assets.deadbydaylight.com/S25_Yun_Jin_Lee_f5725c2cfd.png"
+  },
+  {
+    "title": "Ellen Ripley",
+    "slug": "ellen-ripley",
+    "picture": "https://assets.deadbydaylight.com/S39_Ellen_Ripley_443456805d.png"
+  },
+  {
+    "title": "Meg Thomas",
+    "slug": "meg-thomas",
+    "picture": "https://assets.deadbydaylight.com/S02_Meg_Thomas_81c3064711.png"
+  },
+  {
+    "title": "Ashley J. Williams",
+    "slug": "ashley-j-williams",
+    "picture": "https://assets.deadbydaylight.com/S17_Ashley_J_Williams_9b089cc348.png"
+  },
+  {
+    "title": "Renato Lyra",
+    "slug": "renato-lyra",
+    "picture": "https://assets.deadbydaylight.com/S36_Renato_Lyra_57d7806767.png"
+  },
+  {
+    "title": "Laurie Strode",
+    "slug": "laurie-strode",
+    "picture": "https://assets.deadbydaylight.com/S06_Laurie_Strode_9a994f13e3.png"
+  },
+  {
+    "title": "Jeffrey \"Jeff\" Johansen",
+    "slug": "jeffrey-jeff-johansen",
+    "picture": "https://assets.deadbydaylight.com/S15_Jeff_Johansen_e2102dec55.png"
+  },
+  {
+    "title": "Ace Visconti",
+    "slug": "ace-visconti",
+    "picture": "https://assets.deadbydaylight.com/S07_Ace_Visconti_ecf7824523.png"
+  },
+  {
+    "title": "Steve Harrington",
+    "slug": "steve-harrington",
+    "picture": "https://assets.deadbydaylight.com/S18_Steve_Harrington_a3cc0f9545.png"
+  },
+  {
+    "title": "Nancy Wheeler",
+    "slug": "nancy-wheeler",
+    "picture": "https://assets.deadbydaylight.com/S19_Nancy_Wheeler_821427b90a.png"
+  },
+  {
+    "title": "Taurie Cain",
+    "slug": "taurie-cain",
+    "picture": "https://assets.deadbydaylight.com/S45_Taurie_Cain_06c598d6cd.png"
+  },
+  {
+    "title": "Orela Rose",
+    "slug": "orela-rose",
+    "picture": "https://assets.deadbydaylight.com/S46_Orela_Rose_dde5e1895f.png"
+  },
+  {
+    "title": "Michonne",
+    "slug": "michonne",
+    "picture": "https://assets.deadbydaylight.com/S48_Michonne_Grimes_224a2a60b9.png"
+  },
+  {
+    "title": "Rick Grimes",
+    "slug": "rick-grimes",
+    "picture": "https://assets.deadbydaylight.com/S47_Rick_Grimes_79c2fa66b4.png"
+  },
+  {
+    "title": "Vee Boonyasak",
+    "slug": "vee-boonyasak",
+    "picture": "https://assets.deadbydaylight.com/S49_Vee_Boonyasak_22abc69c8e.png"
+  }
+]

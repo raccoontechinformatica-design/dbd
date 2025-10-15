@@ -29,8 +29,25 @@ async function saveItem(title, path, data) {
     fs.writeFileSync(`${path}/${title}.json`, jsonData, 'utf8');
 }
 
-(async() => {
-    const slugs = await getSlugs('killer');
+async function getCharactersInfo(role) {
+ const response = await axios.get('https://deadbydaylight.com/page-data/pt-br/jogo/personagens/page-data.json');
+    const {data} = response;
+    const pageContext = data.result.pageContext;
+    const {edges} = pageContext.postsData.characters;
+    let nodeList = Array.from(edges).map(el => el.node);
+    if(role) {
+        nodeList = nodeList.filter(el => el.role == role)
+    }
+    let charactersJson = nodeList.map(el => ({
+        title: el.title,
+        slug: el.slug,
+        picture: el.headshot.url
+    })).sort();
+    return charactersJson;
+}
+
+async function saveKillersJSON() {
+ const slugs = await getSlugs('killer');
     // const data = await getData(slugs[0]);
     slugs.forEach(async(el) => {
         console.log(el)
@@ -38,4 +55,7 @@ async function saveItem(title, path, data) {
         await saveItem(el, 'killers', data);
         await wait(3)
     })
+}
+
+(async() => {
 })();
